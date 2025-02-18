@@ -10,25 +10,30 @@ class Controller
             if (isset($_GET['controller'])) {
                 switch ($_GET['controller']) {
                     case 'page':
-                        //charger controleur page
+                        // Charger le contrôleur de page
                         $controller = new PageController();
                         $controller->route();
                         break;
                     case 'auth':
-                        //charger controleur auth
+                        // Charger le contrôleur d'authentification
                         $controller = new AuthController();
                         $controller->route();
                         break;
                     case 'user':
+                        // Charger le contrôleur utilisateur
                         $controller = new UserController();
                         $controller->route();
                         break;
-                    default:
-                        throw new \Exception("Le controleur n'existe pas");
+                    case 'article':
+                        // Charger le contrôleur article
+                        $controller = new ArticleController();
+                        $controller->route();
                         break;
+                    default:
+                        throw new \Exception("Le contrôleur n'existe pas");
                 }
             } else {
-                //Chargement la page d'accueil si pas de controleur dans l'url
+                // Chargement de la page d'accueil si aucun contrôleur n'est défini dans l'URL
                 $controller = new PageController();
                 $controller->home();
             }

@@ -38,3 +38,33 @@
 .rate.enabled > label:hover ~ input:checked ~ label {
     color: #c59b08;
 }
+
+/* Ajout des styles pour les articles */
+.article-detail {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.article-detail .card {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: none;
+    padding: 1rem;
+}
+
+.article-detail h1 {
+    /* Utilise la couleur primaire définie dans les variables */
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+.article-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: var(--dark);
+    padding: 1rem 0;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
